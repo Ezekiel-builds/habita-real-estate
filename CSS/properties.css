@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Satoshi:wght@400;500;700&display=swap');
+@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-thin-straight/css/uicons-thin-straight.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-main);
+}
+
+:root {
+
+  /* ===== PRIMARY BRAND ===== */
+  --primary: #6C63FF;          /* Main purple (buttons, highlights) */
+  --primary-light: #8B84FF;    /* Hover / lighter accents */
+  --primary-dark: #5146D9;     /* Active / pressed state */
+
+  /* ===== BACKGROUNDS ===== */
+  --bg-main: #F5F7FB;          /* Page background */
+  --bg-section: #FFFFFF;       /* Cards / sections */
+  --bg-soft: #EEF1F7;          /* Soft sections / inputs */
+--bg-dark-overlay: linear-gradient(
+  135deg,
+  rgba(81, 70, 217, 0.75) 0%,
+  rgba(0, 0, 0, 0.45) 100%
+); /* Hero overlay */
+
+  /* ===== TEXT COLORS ===== */
+  --text-main: #1E1E2F;        /* Main headings */
+  --text-secondary: #555770;   /* Paragraphs */
+  --text-muted: #8A8CA5;       /* Labels / small text */
+  --text-white: #FFFFFF;       /* On dark backgrounds */
+  --nav-text-hero: #FFFFFF;
+--nav-text-hero-hover: #6C63FF; /* purple on hover */
+--hero-txt: #FFF8EC;
+  /* ===== BORDERS / UI ===== */
+  --border-light: #E4E7EC;     /* Card borders */
+  --border-soft: #F0F2F8;      /* Subtle dividers */
+
+  /* ===== STATUS / TAGS ===== */
+  --success: #22C55E;          /* For Sale */
+  --info: #0c2753;             /* For Rent */
+  --warning: #F59E0B;          /* Highlights if needed */
+
+  /* ===== SHADOW ===== */
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-card: 0 8px 24px rgba(0,0,0,0.08);
+
+   /* ===== HEADINGS ===== */
+
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);      /* Hero titles */
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);   /* Section titles */
+  --fs-h3: clamp(1.4rem, 2.5vw, 1.8rem);  /* Card titles */
+  --font-display: 'Fraunces', serif;  
+  /* ===== BODY TEXT ===== */
+  --font-body: 'Satoshi', sans-serif; 
+  --fs-lg: clamp(1.1rem, 1.5vw, 1.25rem); /* Lead text */
+  --fs-base: clamp(1rem, 1.2vw, 1.1rem);  /* Normal text */
+  --fs-sm: clamp(0.9rem, 1vw, 0.95rem);   /* Small text */
+
+
+  /* ===== EXTRA SMALL ===== */
+
+  --fs-xs: clamp(0.75rem, 0.8vw, 0.85rem); /* Labels, tags */
+
+  /* ===== LOGO ICON ===== */
+  --logo-icon-bg: #6C63FF;   /* your purple */
+  --logo-icon-color: #FFFFFF;
+
+  /* ===== BUTTONS ===== */
+ --btn-outline-border: #FFFFFF;
+--btn-outline-text: #FFFFFF;
+--btn-outline-hover-bg: #6C63FF;
+--btn-outline-hover-border: #6C63FF;
+}
+
+h3 {
+   font-family: var(--font-display);
+   color: var(--text-main);
+   font-size: var(--fs-h3)
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+.search-box  {
+    width: 100%;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 16px 20px;
+  border: none;
+  background-color: var(--bg-soft);
+  border-radius: 12px;
+  font-size: var(--fs-base);
+}
+
+.search-input:hover,
+.search-input:focus {
+  background-color: var(--bg-section);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+  outline: none;
+}
+
+.search-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--text-white);
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+.search-btn:hover {
+  background-color: var(--primary-light);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s ease;
+}
+
+.search-btn i {
+  margin-right: 8px;
+  font-size: var(--fs-base);
+}
+
+.properties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding: 16px 20px;
+}
+
+.house-texts {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.house-status .for-sale {
+  background-color: var(--success);
+  padding: 0 12px;
+  border-radius: 99px;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.house-status .for-rent {
+  background-color: var(--info);
+  padding: 0 12px;
+  border-radius: 99px;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+#no-result {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: var(--fs-lg);
+    color: var(--text-muted);
+    margin-top: 20px;
+}

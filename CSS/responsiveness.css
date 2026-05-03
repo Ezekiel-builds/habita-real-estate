@@ -1,0 +1,278 @@
+ @media (max-width: 768px) {
+     /* Mobile styles */
+     .hero-wrapper::before {
+         height: 100%;
+     }
+
+     .hero-wrapper {
+         min-height: 100vh;
+     }
+
+     .hero-txt h2 {
+         font-size: var(--fs-h3); /* Smaller on mobile */
+     }
+
+     .hero-txt p {
+         font-size: var(--fs-base);
+     }
+
+     .explore-cards {
+         flex-direction: column;
+         gap: 16px;
+     }
+
+     .explore-card {
+         border-right: none;  /* remove dividers on mobile */
+         border-bottom: 1px solid #E4E7EC;
+         padding: 8px 0;
+     }
+
+    /*  .explore-card:last-child {
+         border-bottom: none;
+     } */
+
+     .search-btn {
+         width: 100%;
+         padding: 16px 20px;
+         margin-top: 8px;
+     }
+
+     .mobile-list-btn {
+         display: none;
+     }
+
+     .hamburger {
+         display: flex; /* show on mobile */
+     }
+
+     /* hide desktop list property btn */
+     .header-actions .btn {
+         display: none;
+     }
+
+     /* hide desktop like btn */
+     .like-btn {
+         display: none;
+     }
+
+     /* Mobile nav — hidden by default */
+     .navLinks {
+         display: none;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         right: 0;
+         background: linear-gradient(35deg, rgba(65, 65, 179, 0.196), rgba(155, 155, 63, 0.324)); /* your purple */
+        /*  backdrop-filter: blur(10px); */
+         padding: 24px;
+         flex-direction: column;
+         gap: 0;
+         transition: .03s ease;
+     }
+
+     /* show when open */
+     .navLinks.open {
+         display: flex;
+         animation: slideDown 0.3s ease;
+     }
+
+     @keyframes slideDown {
+         from { opacity: 0; transform: translateY(-10px); }
+         to   { opacity: 1; transform: translateY(0); }
+     }
+
+     .navLinks ul {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 0;
+         width: 100%;
+     }
+
+     .navLinks ul li {
+         width: 100%;
+         border-bottom: 1px solid rgba(255, 255, 255, 0.566);
+     }
+
+     .navLinks ul li a {
+         display: block;
+         padding: 16px 0;
+         font-size: 1.2rem;
+         font-weight: 500;
+     }
+
+     /* List property full width at bottom */
+     .mobile-list-btn {
+         display: block;
+         width: 100%;
+         text-align: center;
+         margin-top: 20px;
+         padding: 14px;
+         border: 1.5px solid rgba(255,255,255,0.6);
+         border-radius: 99px;
+         color: white;
+         text-decoration: none;
+         font-weight: 600;
+         transition: all 0.3s ease;
+     }
+
+     .mobile-list-btn:hover {
+         background: white;
+         color: var(--primary);
+     }
+
+     .house-cards {
+         grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */      
+         gap: 16px;
+     }
+
+     .cta-content {
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+     }
+
+     .cta-txt {
+         text-align: center;
+     }
+
+     .footer-content {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 20px;
+     }
+
+     .footer-bottom {
+         flex-direction: column;
+         gap: 10px;
+         text-align: center;
+         padding: 16px 0;
+     }
+ }
+
+ @media (min-width: 769px) and (max-width: 1024px) {
+     /* Tablet styles */
+     .hero-txt h2 {
+         font-size: var(--fs-h2);
+     }
+
+     .house-cards {
+         grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */     
+     }
+
+     .property-amenities ul {
+        grid-template-columns: repeat(4, 1fr);
+     }
+
+     .tour-btn {
+        padding: 12px 20px;
+        
+     }
+
+     .cta-content {
+         gap: 20px;
+     }
+
+     .footer-content {
+         gap: 20px;
+     }
+ }
+
+ @media (max-width: 480px) {
+     /* Extra small mobile */
+     .hero-txt h2 {
+         font-size: var(--fs-h3);
+     }
+
+     .hero-txt p {
+         font-size: var(--fs-sm);
+     }
+
+        .explore-cards {
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         padding: 16px 20px;
+
+     }
+
+     .search-btn {
+        text-align: center;
+     }
+
+     .house-cards {
+         grid-template-columns: repeat(1, 1fr);
+     }
+
+     .property-amenities ul {
+        grid-template-columns: repeat(2, 1fr);
+     }
+
+     .tour-btn {
+         width: 100%;
+         padding: 16px 20px;
+         text-align: center;
+
+     }
+
+     .cta-section {
+         padding: 16px 32px;
+     }
+
+     .footer-container {
+         padding: 16px 20px;
+     }
+
+     .properties {
+        grid-template-columns: repeat(1, 1fr);
+     }
+
+     .search-btn {
+        width: 200px; 
+        padding: 16px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .search-btn i {
+        margin-right: 8px;
+        font-size: var(--fs-base);
+     }
+
+     .search-input {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: var(--fs-xm);
+     }
+
+     /* Property schedule input */
+       .schedule-container .schedule-form input {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: var(--fs-base);
+          
+        } 
+
+      .filter {
+        flex-direction: column;
+        gap: 12px;
+      }     
+
+     .agent-list {
+        grid-template-columns: 1fr;
+     }
+
+     .maintenance-message {
+        text-align: center;
+     }
+
+     .maintenance-notification {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+        
+     }
+ }

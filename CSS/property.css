@@ -1,0 +1,346 @@
+@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-solid-straight/css/uicons-solid-straight.css');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Satoshi:wght@400;500;700&display=swap');
+
+
+:root {
+
+  /* ===== PRIMARY BRAND ===== */
+  --primary: #6C63FF;          /* Main purple (buttons, highlights) */
+  --primary-light: #8B84FF;    /* Hover / lighter accents */
+  --primary-dark: #5146D9;     /* Active / pressed state */
+
+  /* ===== BACKGROUNDS ===== */
+  --bg-main: #F5F7FB;          /* Page background */
+  --bg-section: #FFFFFF;       /* Cards / sections */
+  --bg-soft: #EEF1F7;          /* Soft sections / inputs */
+--bg-dark-overlay: linear-gradient(
+  135deg,
+  rgba(81, 70, 217, 0.75) 0%,
+  rgba(0, 0, 0, 0.45) 100%
+); /* Hero overlay */
+
+  /* ===== TEXT COLORS ===== */
+  --text-main: #1E1E2F;        /* Main headings */
+  --text-secondary: #555770;   /* Paragraphs */
+  --text-muted: #8A8CA5;       /* Labels / small text */
+  --text-white: #FFFFFF;       /* On dark backgrounds */
+  --nav-text-hero: #FFFFFF;
+--nav-text-hero-hover: #6C63FF; /* purple on hover */
+--hero-txt: #FFF8EC;
+  /* ===== BORDERS / UI ===== */
+  --border-light: #E4E7EC;     /* Card borders */
+  --border-soft: #F0F2F8;      /* Subtle dividers */
+
+  /* ===== STATUS / TAGS ===== */
+  --success: #22C55E;          /* For Sale */
+  --info: #0c2753;             /* For Rent */
+  --warning: #F59E0B;          /* Highlights if needed */
+
+  /* ===== SHADOW ===== */
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-card: 0 8px 24px rgba(0,0,0,0.08);
+
+   /* ===== HEADINGS ===== */
+
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);      /* Hero titles */
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);   /* Section titles */
+  --fs-h3: clamp(1.4rem, 2.5vw, 1.8rem);  /* Card titles */
+  --font-display: 'Fraunces', serif;  
+  /* ===== BODY TEXT ===== */
+  --font-body: 'Satoshi', sans-serif; 
+  --fs-lg: clamp(1.1rem, 1.5vw, 1.25rem); /* Lead text */
+  --fs-base: clamp(1rem, 1.2vw, 1.1rem);  /* Normal text */
+  --fs-sm: clamp(0.9rem, 1vw, 0.95rem);   /* Small text */
+
+
+  /* ===== EXTRA SMALL ===== */
+
+  --fs-xs: clamp(0.75rem, 0.8vw, 0.85rem); /* Labels, tags */
+
+  /* ===== LOGO ICON ===== */
+  --logo-icon-bg: #6C63FF;   /* your purple */
+  --logo-icon-color: #FFFFFF;
+
+  /* ===== BUTTONS ===== */
+ --btn-outline-border: #FFFFFF;
+--btn-outline-text: #FFFFFF;
+--btn-outline-hover-bg: #6C63FF;
+--btn-outline-hover-border: #6C63FF;
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    color: var(--text-main);
+}
+
+.property-container {
+    padding: 20px;
+}
+
+.product-list {
+    background-color: var(--bg-section);
+}
+
+.property-image {
+    width: 100%;
+    height: clamp(280px, 45vh, 520px);
+    overflow: hidden;
+    border-radius: 8px;
+    /* margin-bottom: 12px; */
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: var(--shadow-card);
+}
+
+.property-info {
+    border-bottom: 1px solid var(--text-muted);
+    line-height: 0em;
+}
+
+.property-info p {
+    color: var(--text-secondary);
+    font-size: var(--fs-lg);
+}
+
+.property-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  /*  padding: 0 12px; */
+}
+
+.property-header h3 {
+    font-size: var(--fs-h3);
+    color: var(--text-main);
+}
+
+.property-header .property-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--info);
+}
+
+.property-details {
+    display: flex;
+    gap: 20px;
+}
+
+.property-details i {
+    color: var(--primary);
+    font-size: var(--fs-sm);
+}
+
+.property-description {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.property-description h3 {
+    font-size: var(--fs-h3);
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.property-description p  {
+    font-size: var(--fs-base);
+}
+
+/* .property-amenities {
+    padding-top: px;
+}
+ */
+.property-amenities h3 {
+    color: var(--text-main);
+    font-size: var(--fs-h3);
+    margin-bottom: 12px;
+}
+
+.property-amenities ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0;
+}
+
+.property-amenities li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-soft);
+    padding: 20px;
+    border-radius: 12px;
+    color: var(--text-secondary);
+    font-size: var(--fs-sm);
+}
+
+.property-amenities li i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.tour-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--text-white);
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: var(--fs-base);
+    transition: background-color 0.3s ease;
+}
+
+.tour-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.schedule-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px); 
+
+     opacity: 0; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.schedule-container.show {
+   opacity: 1; 
+  pointer-events: auto;
+}
+
+.schedule-container h2 {
+    font-family: var(--fs-h2);
+    color: var(--text-main);
+   
+}
+
+.schedule-container p {
+    color: var(--text-main);
+    font-size: var(--fs-base);
+}
+
+.schedule-container .schedule-form {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--bg-section);
+    padding: 24px;
+    width: 340px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+    pointer-events: auto;
+}
+
+.schedule-container .schedule-form input,
+.schedule-container .schedule-form button {
+  padding: 12px;
+  border: none;
+  pointer-events: auto;
+  border-bottom:  1px solid var(--border-light);
+  font-size: var(--fs-lg);
+}
+
+.schedule-container .schedule-form input:hover, input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--primary);
+}
+
+.schedule-btn {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: var(--text-white);
+}
+
+.schedule-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.success-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: .0.3s ease;
+    opacity: 0;  
+    pointer-events: none;
+}
+
+.success-message.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.success-txts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--bg-section);
+    padding: 24px;
+    width: 240px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-card);
+    pointer-events: auto;
+    text-align: center;
+    pointer-events: auto;
+}
+
+.success-message .success-txts p {
+    color: var(--text-main);
+    font-size: var(--fs-lg);
+}
+
+.success-message .checkmark {
+    width: 96px;
+    height: 96px;
+    color: var(--success);
+}
+
+.check-path {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: checkmark 0.9s ease forwards;
+}
+
+@keyframes checkmark {
+    to {
+        stroke-dashoffset: 0;
+    }
+}

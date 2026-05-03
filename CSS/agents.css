@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Satoshi:wght@400;500;700&display=swap');
+
+
+:root {
+
+  /* ===== PRIMARY BRAND ===== */
+  --primary: #6C63FF;          /* Main purple (buttons, highlights) */
+  --primary-light: #8B84FF;    /* Hover / lighter accents */
+  --primary-dark: #5146D9;     /* Active / pressed state */
+
+  /* ===== BACKGROUNDS ===== */
+  --bg-main: #F5F7FB;          /* Page background */
+  --bg-section: #FFFFFF;       /* Cards / sections */
+  --bg-soft: #EEF1F7;          /* Soft sections / inputs */
+--bg-dark-overlay: linear-gradient(
+  135deg,
+  rgba(81, 70, 217, 0.75) 0%,
+  rgba(0, 0, 0, 0.45) 100%
+); /* Hero overlay */
+
+  /* ===== TEXT COLORS ===== */
+  --text-main: #1E1E2F;        /* Main headings */
+  --text-secondary: #555770;   /* Paragraphs */
+  --text-muted: #8A8CA5;       /* Labels / small text */
+  --text-white: #FFFFFF;       /* On dark backgrounds */
+  --nav-text-hero: #FFFFFF;
+--nav-text-hero-hover: #6C63FF; /* purple on hover */
+--hero-txt: #FFF8EC;
+  /* ===== BORDERS / UI ===== */
+  --border-light: #E4E7EC;     /* Card borders */
+  --border-soft: #F0F2F8;      /* Subtle dividers */
+
+  /* ===== STATUS / TAGS ===== */
+  --success: #22C55E;          /* For Sale */
+  --info: #0c2753;             /* For Rent */
+  --warning: #F59E0B;          /* Highlights if needed */
+
+  /* ===== SHADOW ===== */
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-card: 0 8px 24px rgba(0,0,0,0.08);
+
+   /* ===== HEADINGS ===== */
+
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);      /* Hero titles */
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);   /* Section titles */
+  --fs-h3: clamp(1.4rem, 2.5vw, 1.8rem);  /* Card titles */
+  --font-display: 'Fraunces', serif;  
+  /* ===== BODY TEXT ===== */
+  --font-body: 'Satoshi', sans-serif; 
+  --fs-lg: clamp(1.1rem, 1.5vw, 1.25rem); /* Lead text */
+  --fs-base: clamp(1rem, 1.2vw, 1.1rem);  /* Normal text */
+  --fs-sm: clamp(0.9rem, 1vw, 0.95rem);   /* Small text */
+
+
+  /* ===== EXTRA SMALL ===== */
+
+  --fs-xs: clamp(0.75rem, 0.8vw, 0.85rem); /* Labels, tags */
+
+  /* ===== LOGO ICON ===== */
+  --logo-icon-bg: #6C63FF;   /* your purple */
+  --logo-icon-color: #FFFFFF;
+
+  /* ===== BUTTONS ===== */
+ --btn-outline-border: #FFFFFF;
+--btn-outline-text: #FFFFFF;
+--btn-outline-hover-bg: #6C63FF;
+--btn-outline-hover-border: #6C63FF;
+}
+
+h1, h2, h3, h4 {
+    font-size: var(--font-display);
+}
+
+body {
+    font-size: var(--font-body);
+}
+
+ .agent-header {
+    padding: 16px 20px;
+}
+
+.agent-header h3 {
+    font-size: var(--fs-h3);
+    color: var(--text-main);
+}
+
+.agent-header p {
+   font-size: 1.3rem;
+   color: var(--text-main);
+}
+
+.agent-header small {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+}
+
+.agents-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 8px;
+}
+
+.agents-search .search-box {
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    flex-grow: 1;
+    padding: 16px 20px;
+    font-size: var(--fs-base);
+    background-color: var(--bg-soft);
+    border: none;
+    border-radius: 12px;
+}
+
+.search-input:hover,
+.search-input:focus {
+  background-color: var(--bg-section);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+  outline: none;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter button {
+    border: none;
+     padding: 6px 18px;
+    border-radius: 999px;
+    border: 1.5px solid #534AB7;
+    background: transparent;
+    color: #534AB7;
+    cursor: pointer;
+    transition: 0.3 ease;
+}
+
+.filter button:active {
+   background: #534AB7;
+  color: white;
+
+}
+
+.agent-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 16px 20px;
+}
+
+.agent-card {
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-color: var(--bg-soft);
+    border: 1px solid var(--text-muted);
+    border-radius: 8px;
+}
+
+.agent-card.hide {
+    display: none;
+}
+
+.agent-card:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+.agent-img {
+    width: 140px;
+     height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-top: 12px;
+    border: 1px solid var(--text-muted);
+}
+
+.agent-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.agent-credentials {
+    line-height: 1.6em;
+    border-bottom: 1px solid var(--text-secondary);
+    display: inline;
+    width: 80%;
+    padding: 12px;
+}
+
+.agent-credentials h4 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    line-height: 1.6em;
+}
+
+.agent-credentials p {
+    font-size: var(--fs-base);
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.agent-credentials small {
+    display: inline-block;
+    font-size: var(--fs-sm);
+    padding: 4px 12px;
+    border-radius: 999px;
+    line-height: 1.9em;
+    border-bottom: 1px solid var(--text-secondary);
+}
+
+.sales {
+    background-color: #E1F5EE;
+    color: #0F6E56;
+}
+
+.rentals {
+    background-color: #E6F1FB;
+    color: #185FA5;
+}
+
+.commercial {
+    background-color: #FAEEDA;
+    color: #854F0B;
+}
+
+.agent-ratings {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.agent-ratings .greyed-txt {
+    color: var(--text-muted);
+}
+
+.agent-listing p {
+    font-size: var(--fs-base);
+}
+
+.agent-contact .contact-btn{
+    border: 1px solid var(--text-secondary);
+    width: 340px;
+    margin: 12px;
+    padding: 16px 20px;
+    background: transparent;
+    border-radius: 12px;
+    font-size: var(--fs-base);
+    cursor: pointer;
+    transition: .0.3s ease;
+    color: var(--text-main);
+}
+
+.agent-contact .contact-btn:hover {
+    background-color: var(--border-light);
+}

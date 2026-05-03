@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+  /* ===== PRIMARY BRAND ===== */
+  --primary: #6C63FF;          /* Main purple (buttons, highlights) */
+  --primary-light: #8B84FF;    /* Hover / lighter accents */
+  --primary-dark: #5146D9;     /* Active / pressed state */
+
+  /* ===== BACKGROUNDS ===== */
+  --bg-main: #F5F7FB;          /* Page background */
+  --bg-section: #FFFFFF;       /* Cards / sections */
+  --bg-soft: #EEF1F7;          /* Soft sections / inputs */
+--bg-dark-overlay: linear-gradient(
+  135deg,
+  rgba(81, 70, 217, 0.75) 0%,
+  rgba(0, 0, 0, 0.45) 100%
+); /* Hero overlay */
+
+  /* ===== TEXT COLORS ===== */
+  --text-main: #1E1E2F;        /* Main headings */
+  --text-secondary: #555770;   /* Paragraphs */
+  --text-muted: #8A8CA5;       /* Labels / small text */
+  --text-white: #FFFFFF;       /* On dark backgrounds */
+  --nav-text-hero: #FFFFFF;
+--nav-text-hero-hover: #6C63FF; /* purple on hover */
+--hero-txt: #FFF8EC;
+  /* ===== BORDERS / UI ===== */
+  --border-light: #E4E7EC;     /* Card borders */
+  --border-soft: #F0F2F8;      /* Subtle dividers */
+
+  /* ===== STATUS / TAGS ===== */
+  --success: #22C55E;          /* For Sale */
+  --info: #0c2753;             /* For Rent */
+  --warning: #F59E0B;          /* Highlights if needed */
+
+  /* ===== SHADOW ===== */
+  --shadow-soft: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-card: 0 8px 24px rgba(0,0,0,0.08);
+
+   /* ===== HEADINGS ===== */
+
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);      /* Hero titles */
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);   /* Section titles */
+  --fs-h3: clamp(1.4rem, 2.5vw, 1.8rem);  /* Card titles */
+  --font-display: 'Fraunces', serif;  
+  /* ===== BODY TEXT ===== */
+  --font-body: 'Satoshi', sans-serif; 
+  --fs-lg: clamp(1.1rem, 1.5vw, 1.25rem); /* Lead text */
+  --fs-base: clamp(1rem, 1.2vw, 1.1rem);  /* Normal text */
+  --fs-sm: clamp(0.9rem, 1vw, 0.95rem);   /* Small text */
+
+
+  /* ===== EXTRA SMALL ===== */
+
+  --fs-xs: clamp(0.75rem, 0.8vw, 0.85rem); /* Labels, tags */
+
+  /* ===== LOGO ICON ===== */
+  --logo-icon-bg: #6C63FF;   /* your purple */
+  --logo-icon-color: #FFFFFF;
+
+  /* ===== BUTTONS ===== */
+ --btn-outline-border: #FFFFFF;
+--btn-outline-text: #FFFFFF;
+--btn-outline-hover-bg: #6C63FF;
+--btn-outline-hover-border: #6C63FF;
+}
+
+
+body {
+   /*  display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center; */
+    font-family: var(--font-body);
+    background-color: var(--bg-main)
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Satoshi:wght@400;500;700&display=swap');
+@import url('https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css');
+
+
+h2, h3 {
+    font-family: var(--font-display);
+    color: var(--text-main);
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+}
+
+.logo i {
+    background-color: var(--logo-icon-bg);
+    padding: 4px;
+    border-radius: 12px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--logo-icon-color);
+
+}
+
+.logo h1 {
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    margin-left: 8px;
+}
+
+.back-btn {
+    background-color: var(--primary);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-btn a {
+    color: var(--text-white);
+    font-size: var(--fs-base);
+    text-decoration: none;
+}
+
+.back-btn a:hover {
+    color: var(--primary-light);
+}
+
+.back-btn i {
+    margin-right: 8px;
+}
+
+.maintenance-container {
+    padding: 16px 20px;
+}
+
+.maintenance-container h3 {
+    font-size: var(--fs-h3);
+}
+
+.maintenance-container h2 {
+    font-size: var(--fs-h2);
+    color: var(--primary);
+}
+
+.maintenance-container p {
+    font-size: var(--fs-base);
+    color: var(--text-secondary);   
+}
+
+.maintenance-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 80px;
+}
+
+.habita-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.habita-logo i {
+    width: 80px;
+    height: 80px;
+    font-size: 1.25rem;
+    background-color: var(--logo-icon-bg);
+    color: var(--logo-icon-color);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.habita-logo h1 {
+    font-size: 1.25rem;
+    color: var(--text-main);
+    margin-left: 16px;
+}
+
+.maintenance-message h3 {
+    font-size: var(--fs-h3);
+    color: var(--text-main);
+    margin-bottom: 12px;
+} 
+
+.maintenance-message p {
+    font-size: var(--fs-base);
+    color: var(--text-muted);
+}
+
+.maintenance-update {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+}
+
+.maintenance-update input {
+    width: clamp(300px, 50%, 400px);
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: var(--fs-base);
+}
+
+.maintenance-update input:hover,
+.maintenance-update input:focus {
+    outline: none;
+    border: 1px solid var(--text-secondary);
+}
+
+.maintenance-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.notification-btn {
+   width: 120px;
+   background-color: var(--primary);
+   border: none;
+   padding: 16px 20px;
+   border-radius: 12px;
+   color: var(--text-white);
+   font-size: var(--fs-base);
+   font-weight: 600;
+   margin-top: 12px;
+   cursor: pointer;
+}
+
+.maintenance-update small {
+    font-size: var(--fs-sm);
+    color: var(--text-muted);
+}
+
+.habita-socials {
+    font-size: var(--fs-lg);
+}
